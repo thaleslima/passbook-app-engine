@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
       <servlet-name>passbook</servlet-name>
-      <url-pattern>/passbook</url-pattern>
+      <url-pattern>/passbook/saude</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>guestbook.jsp</welcome-file>
