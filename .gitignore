@@ -1,23 +1,49 @@
-# Created by https://www.gitignore.io/api/appengine,java,intellij,maven
 
-### AppEngine ###
-# Google App Engine generated folder
-appengine-generated/
+# Created by https://www.gitignore.io/api/eclipse,intellij,java,appengine,maven
 
+### Eclipse ###
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
 
-### Java ###
-*.class
+# Eclipse Core
+.project
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# External tool builders
+.externalToolBuilders/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# CDT-specific
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
 
 
 ### Intellij ###
@@ -69,6 +95,26 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+
+### Java ###
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+### AppEngine ###
+# Google App Engine generated folder
+appengine-generated/
 
 
 ### Maven ###
