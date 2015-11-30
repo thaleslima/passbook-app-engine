@@ -1,0 +1,79 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.ciandt.prototype.sas",
+  "serialNumber" : "8j23fm3",
+  "teamIdentifier" : "DC7P966WU6",
+  "barcode" : {
+    "message" : "0254 2145 21445 2145",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "organizationName" : "Toy Town",
+  "description" : "Toy Town Membership",
+  "logoText" : "",
+  "foregroundColor" : "rgb(244, 121, 43)",
+  "backgroundColor" : "rgb(255, 255, 255)",
+  "generic" : {
+    "primaryFields" : [
+      {
+        "key" : "member",
+        "value" : "Alex de Franca"
+      },
+      {
+        "key" : "birth",
+        "label" : "birth",
+        "value" : "29/06/1972"
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "subtitle",
+        "label" : "CODIGO DE IDENTIFICACAO",
+        "value" : "0254 2145 21445 2145"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "level",
+        "label" : "PLANO",
+        "value" : "Especial"
+      },
+      {
+        "key" : "favorite",
+        "label" : "ACOMODACAO",
+        "value" : "Apartamento"
+      },
+      {
+        "key" : "favorite2",
+        "label" : "PRODUTO",
+        "value" : "598"
+      }
+    ],
+
+    "backFields" : [
+      {
+        "label" : "Cobertura",
+        "key" : "cobertura",
+        "value" : "Ambulatorial + Hospitalar + Obstetricia"
+      },
+
+      {
+        "label" : "Empresa",
+        "key" : "empresa",
+        "value" : "00379 Sul America Companhia de seguro Saude"
+      },
+
+      {
+        "label" : "ANS",
+        "key" : "ANS",
+        "value" : 416428,
+      },
+      
+      {
+        "label" : "Nascimento",
+        "key" : "timeFull",
+        "value" : "29/06/1972"
+      }
+    ]
+  }
+}
