@@ -12,6 +12,27 @@
       <servlet-name>passbook</servlet-name>
       <url-pattern>/passbook/saude</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>passbookCard</servlet-name>
+        <servlet-class>br.com.sas.PassbookCardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>passbookCard</servlet-name>
+        <url-pattern>/passbook/saude/card</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>saude</servlet-name>
+        <jsp-file>saude.html</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>saude</servlet-name>
+        <url-pattern>/saude</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>guestbook.jsp</welcome-file>
     </welcome-file-list>

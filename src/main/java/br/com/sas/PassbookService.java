@@ -1,5 +1,6 @@
 package br.com.sas;
 
+import br.com.sas.model.Saude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.brendamour.jpasskit.signing.PKInMemorySigningUtil;
 import de.brendamour.jpasskit.signing.PKPassTemplateFolder;
@@ -12,13 +13,17 @@ import java.io.ByteArrayInputStream;
  * Created by thales on 11/30/15.
  */
 public class PassbookService {
-    private static String appleWWDRCA = "passbook/AppleWWDRCA.cer"; // this is apple's developer relation cert
-    private static String privateKeyPath = "passbook/privateKey.p12"; // the private key you exported from keychain
-    private static String privateKeyPassword = ""; // the password you used to export
-    private static String templateSaude = "templateSaude.raw"; // the password you used to export
+    private static String appleWWDRCA = "passbook/AppleWWDRCA.cer";
+    private static String privateKeyPath = "passbook/privateKey.p12";
+    private static String templateSaude = "templateSaude.raw";
+    private static String templateCardSaude = "templateSaudeCard.raw";
 
-    public static ByteArrayInputStream geraPassbookSaude() throws Exception{
-        return geraPassbook(templateSaude, Util.returnTemplateJsonSaude());
+    public static ByteArrayInputStream geraPassbookSaude(Saude saude) throws Exception{
+        return geraPassbook(templateSaude, Util.returnTemplateJsonSaude(saude));
+    }
+
+    public static ByteArrayInputStream geraPassbookCardSaude(Saude saude) throws Exception{
+        return geraPassbook(templateCardSaude, Util.returnTemplateJsonCardSaude(saude));
     }
 
     public static ByteArrayInputStream geraPassbook(String template, String templateJson) throws Exception {

@@ -1,0 +1,24 @@
+.container{
+    margin-top:100px;
+}
+
+
+.header-form {
+    text-align: center;
+    color: rgb(119, 119, 119);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(229, 229, 229);
+    margin-bottom: 20px;
+}
+
+.btn-orange {
+    color: rgb(255, 255, 255);
+    width: 150px;
+    background-color: rgb(220, 81, 24);
+}
+
+.btn{
+
+
+}

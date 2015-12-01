@@ -1,0 +1,72 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.ciandt.prototype.sas",
+  "serialNumber" : "p69f2J",
+  "teamIdentifier" : "DC7P966WU6",
+  "barcode" : {
+    "message" : "123456789",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "organizationName" : "Organic Produce",
+  "description" : "Organic Produce Loyalty Card",
+  "foregroundColor" : "rgb(244, 121, 43)",
+  "backgroundColor" : "rgb(255, 255, 255)",
+  "storeCard" : {
+    "primaryFields" : [
+      {
+        "key" : "balance",
+        "label" : "Código de identificação",
+        "value" : "0254 2145 21445 2145",
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "deal",
+        "label" : "Segurado",
+        "value" : "Alex de Franca"
+      },
+      {
+        "key" : "level",
+        "label" : "PLANO",
+        "value" : "Especial"
+      }
+    ],
+      
+    "backFields" : [
+      {
+        "key" : "favorite",
+        "label" : "ACOMODACAO",
+        "value" : "Apartamento"
+      },
+      {
+        "key" : "favorite2",
+        "label" : "PRODUTO",
+        "value" : "598"
+      },
+      {
+        "label" : "Cobertura",
+        "key" : "cobertura",
+        "value" : "Ambulatorial + Hospitalar + Obstetricia"
+      },
+
+      {
+        "label" : "Empresa",
+        "key" : "empresa",
+        "value" : "00379 Sul America Companhia de seguro Saude"
+      },
+
+      {
+        "label" : "ANS",
+        "key" : "ANS",
+        "value" : 416428,
+      },
+      
+      {
+        "label" : "Nascimento",
+        "key" : "timeFull",
+        "value" : "29/06/1972"
+      }
+    ]
+  }
+}
