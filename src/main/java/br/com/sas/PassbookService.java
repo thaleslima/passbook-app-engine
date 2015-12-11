@@ -16,7 +16,7 @@ public class PassbookService {
     private static String appleWWDRCA = "passbook/AppleWWDRCA.cer";
     private static String privateKeyPath = "passbook/privateKey.p12";
     private static String templateSaude = "templateSaude.raw";
-    private static String templateCardSaude = "templateSaudeCard.raw";
+    private static String templateCardSaude = "templateSaude.raw";
 
     public static ByteArrayInputStream geraPassbookSaude(Saude saude) throws Exception{
         return geraPassbook(templateSaude, Util.returnTemplateJsonSaude(saude));

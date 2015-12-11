@@ -32,6 +32,7 @@ public class PassbookServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("application/vnd.apple.pkpass");
+    resp.setHeader("Content-Disposition","attachment; filename=\"saude.pkpass\"");
     ServletOutputStream out=resp.getOutputStream();
     ByteArrayInputStream inputStream;
 
@@ -48,7 +49,7 @@ public class PassbookServlet extends HttpServlet {
       saude.setAns("416428");
       saude.setNascimento("29/06/1972");
 
-      inputStream = PassbookService.geraPassbookSaude(saude);
+      inputStream = PassbookService.geraPassbookCardSaude(saude);
 
       if(inputStream != null){
         int value;
@@ -66,7 +67,8 @@ public class PassbookServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    resp.setContentType("application/vnd.apple.pkpass");
+    resp.setContentType("application/vnd.apple.pkpass; filename=\"saude.pkpass\"");
+    resp.setHeader("Content-Disposition","attachment; filename=\"saude.pkpass\"");
     ServletOutputStream out=resp.getOutputStream();
     ByteArrayInputStream inputStream;
 
@@ -84,7 +86,7 @@ public class PassbookServlet extends HttpServlet {
       saude.setAns(req.getParameter("ans"));
       saude.setNascimento(req.getParameter("nascimento"));
 
-      inputStream = PassbookService.geraPassbookSaude(saude);
+      inputStream = PassbookService.geraPassbookCardSaude(saude);
 
       if(inputStream != null){
         int value;

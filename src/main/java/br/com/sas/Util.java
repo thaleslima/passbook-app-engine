@@ -108,13 +108,22 @@ public class Util {
         a.append("  },");
         a.append("  \"organizationName\" : \"Sulamerica saúde\",");
         a.append("  \"description\" : \"Sulamerica segurado\",");
-        a.append("  \"foregroundColor\" : \"rgb(244, 121, 43)\",");
-        a.append("  \"backgroundColor\" : \"rgb(255, 255, 255)\",");
+        a.append("  \"foregroundColor\" : \"rgb(255, 255, 255)\",");
+        a.append("  \"backgroundColor\" : \"rgb(27, 54, 93)\",");
         a.append("  \"storeCard\" : {");
+
+        a.append("  \"headerFields\" : [");
+        a.append("  {");
+        a.append("      \"key\" : \"balances\",");
+        a.append("      \"label\" : \"\",");
+        a.append("      \"value\" : \"Passbook SulAmerica\",");
+        a.append("  }");
+        a.append("  ],");
+
         a.append("    \"primaryFields\" : [");
         a.append("      {");
         a.append("        \"key\" : \"balance\",");
-        a.append("        \"label\" : \"CODIGO DE IDENTIFICACAO\",");
+        a.append("        \"label\" : \"\",");
         a.append("        \"value\" : \"").append(saude.getCarterinha()).append("\",");
         a.append("      }");
         a.append("    ],");
