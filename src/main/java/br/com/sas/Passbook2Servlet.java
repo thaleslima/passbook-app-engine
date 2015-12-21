@@ -18,6 +18,7 @@ package br.com.sas;
 
 import br.com.sas.model.Saude;
 
+import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,18 +26,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-public class PassbookCardServlet extends HttpServlet {
+public class Passbook2Servlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("application/vnd.apple.pkpass");
+    resp.setHeader("Content-Disposition","attachment; filename=\"saude.pkpass\"");
     ServletOutputStream out=resp.getOutputStream();
     ByteArrayInputStream inputStream;
 
     try {
 
       Saude saude = new Saude();
-      saude.setNome("Fulano da silva");
+      saude.setNome("Paulo da Silva");
       saude.setCarterinha("1254 2568 5412 5412");
       saude.setPlano("Especial");
       saude.setAcomodacao("Apartamento");
@@ -46,7 +48,7 @@ public class PassbookCardServlet extends HttpServlet {
       saude.setAns("416428");
       saude.setNascimento("29/06/1972");
 
-      inputStream = PassbookService.geraPassbookCardSaude(saude);
+      inputStream = PassbookService.geraPassbookSaude2(saude);
 
       if(inputStream != null){
         int value;
@@ -61,4 +63,43 @@ public class PassbookCardServlet extends HttpServlet {
       out.print("erro:" + e.getMessage());
     }
   }
+
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    resp.setContentType("application/vnd.apple.pkpass; filename=\"saude.pkpass\"");
+    resp.setHeader("Content-Disposition","attachment; filename=\"saude.pkpass\"");
+    ServletOutputStream out=resp.getOutputStream();
+    ByteArrayInputStream inputStream;
+
+    try {
+
+      Saude saude = new Saude();
+
+      saude.setNome(req.getParameter("nome"));
+      saude.setCarterinha(req.getParameter("carterinha"));
+      saude.setPlano(req.getParameter("plano"));
+      saude.setAcomodacao(req.getParameter("acomodacao"));
+      saude.setProduto(req.getParameter("produto"));
+      saude.setCobertura(req.getParameter("cobertura"));
+      saude.setEmpresa(req.getParameter("empresa"));
+      saude.setAns(req.getParameter("ans"));
+      saude.setNascimento(req.getParameter("nascimento"));
+
+      inputStream = PassbookService.geraPassbookSaude2(saude);
+
+      if(inputStream != null){
+        int value;
+        while ((value=inputStream.read()) != -1) {
+          out.write(value);
+        }
+      }
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      resp.setContentType("text/plain");
+      out.print("erro:" + e.getMessage());
+    }
+  }
+
+
 }

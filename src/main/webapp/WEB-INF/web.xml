@@ -16,11 +16,11 @@
 
     <servlet>
         <servlet-name>passbookCard</servlet-name>
-        <servlet-class>br.com.sas.PassbookCardServlet</servlet-class>
+        <servlet-class>br.com.sas.Passbook2Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>passbookCard</servlet-name>
-        <url-pattern>/passbook/saude/card</url-pattern>
+        <url-pattern>/passbook/saude/2</url-pattern>
     </servlet-mapping>
 
 

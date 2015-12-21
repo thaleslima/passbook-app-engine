@@ -39,7 +39,7 @@ public class PassbookServlet extends HttpServlet {
     try {
 
       Saude saude = new Saude();
-      saude.setNome("Fulano da silva");
+      saude.setNome("Paulo da Silva");
       saude.setCarterinha("1254 2568 5412 5412");
       saude.setPlano("Especial");
       saude.setAcomodacao("Apartamento");
@@ -49,7 +49,7 @@ public class PassbookServlet extends HttpServlet {
       saude.setAns("416428");
       saude.setNascimento("29/06/1972");
 
-      inputStream = PassbookService.geraPassbookCardSaude(saude);
+      inputStream = PassbookService.geraPassbookSaude(saude);
 
       if(inputStream != null){
         int value;
@@ -86,7 +86,7 @@ public class PassbookServlet extends HttpServlet {
       saude.setAns(req.getParameter("ans"));
       saude.setNascimento(req.getParameter("nascimento"));
 
-      inputStream = PassbookService.geraPassbookCardSaude(saude);
+      inputStream = PassbookService.geraPassbookSaude(saude);
 
       if(inputStream != null){
         int value;

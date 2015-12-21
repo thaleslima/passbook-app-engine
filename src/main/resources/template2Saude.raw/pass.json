@@ -8,29 +8,46 @@
     "format" : "PKBarcodeFormatPDF417",
     "messageEncoding" : "iso-8859-1"
   },
-  "organizationName" : "Organic Produce",
-  "description" : "Organic Produce Loyalty Card",
-  "foregroundColor" : "rgb(244, 121, 43)",
-  "backgroundColor" : "rgb(255, 255, 255)",
+  "organizationName" : "Sulamerica",
+  "description" : "Sulamerica",
+  "logoText" : "",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "backgroundColor" : "rgb(27, 54, 93)",
+  
   "storeCard" : {
+      
+    "headerFields" : [
+       {
+        "key" : "balances",
+        "label" : "",
+        "value" : "Passbook SulAmerica",
+       } 
+    ],
+      
     "primaryFields" : [
       {
         "key" : "balance",
-        "label" : "Código de identificação",
-        "value" : "0254 2145 21445 2145",
+        "label" : "",
+        "value" : "1235 1234 1324 1234",
       }
     ],
     "auxiliaryFields" : [
       {
         "key" : "deal",
-        "label" : "Segurado",
+        "label" : "SEGURADO",
         "value" : "Alex de Franca"
       },
       {
         "key" : "level",
         "label" : "PLANO",
-        "value" : "Especial"
+        "value" : "Especial 100"
+      },
+      {
+        "key" : "level1",
+        "label" : "PRODUTO",
+        "value" : "545"
       }
+        
     ],
       
     "backFields" : [
