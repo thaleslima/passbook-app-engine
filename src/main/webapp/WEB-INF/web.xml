@@ -15,16 +15,6 @@
 
 
     <servlet>
-        <servlet-name>passbookCard</servlet-name>
-        <servlet-class>br.com.sas.Passbook2Servlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>passbookCard</servlet-name>
-        <url-pattern>/passbook/saude/2</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
         <servlet-name>saude</servlet-name>
         <jsp-file>saude.html</jsp-file>
     </servlet>

@@ -13,6 +13,10 @@ To start the app, use the [App Engine Maven Plugin](http://code.google.com/p/app
 
     mvn appengine:devserver
 
+To upload to server
+
+    clean install appengine:update
+
 For further information, consult the [Java App Engine](https://developers.google.com/appengine/docs/java/overview) documentation.
 
 To see all the available goals for the App Engine plugin, run

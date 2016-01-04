@@ -17,18 +17,9 @@ public class PassbookService {
     private static String privateKeyPath = "passbook/privateKey.p12";
     private static String privateKeyPassword = "C1andt.com";
     private static String templateCardSaude = "templateSaude.raw";
-    private static String template2CardSaude = "template2Saude.raw";
-
-    //public static ByteArrayInputStream geraPassbookSaude(Saude saude) throws Exception{
-    //    return geraPassbook(templateSaude, Util.returnTemplateJsonSaude(saude));
-    //}
 
     public static ByteArrayInputStream geraPassbookSaude(Saude saude) throws Exception{
         return geraPassbook(templateCardSaude, Util.returnTemplateJsonSaude(saude));
-    }
-
-    public static ByteArrayInputStream geraPassbookSaude2(Saude saude) throws Exception{
-        return geraPassbook(template2CardSaude, Util.returnTemplate2JsonSaude(saude));
     }
 
     public static ByteArrayInputStream geraPassbook(String template, String templateJson) throws Exception {
