@@ -210,6 +210,8 @@ public class PKSigningInformationUtil {
             }
             certificateFileInputStream = new FileInputStream(certFile);
 
+            System.out.print(filePath);
+
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509", BouncyCastleProvider.PROVIDER_NAME);
             Certificate certificate = certificateFactory.generateCertificate(certificateFileInputStream);
             if (certificate instanceof X509Certificate) {
